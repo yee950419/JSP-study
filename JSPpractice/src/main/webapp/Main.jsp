@@ -20,7 +20,7 @@
 	<form method="post" action="RequestParameter.jsp">
 		아이디 : <input type="text" name="id" value = "" /><br />
 		성별 : 
-		<input type="radio" name="sex" value = "man" />남자
+		<input type="radio" name="sex" value = "man" checked="checked" />남자
 		<input type="radio" name="sex" value = "woman" />여자<br />
 		관심사항 :
 		<input type="checkbox" name="favo" value="eco" checked="checked"/>경제
