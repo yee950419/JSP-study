@@ -2,18 +2,15 @@
 <%@ page import="java.text.SimpleDateFormat" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <%
 SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd");
-long add_date = s.parse(request.getParameter("addDate")).getTime();
-int add_int = Integer.parseInt(request.getParameter("addInt"));
-String add_str = request.getParameter("addStr");
+long addDate = s.parse(request.getParameter("addDate")).getTime();
+int addInt = Integer.parseInt(request.getParameter("addInt"));
+String addStr = request.getParameter("addStr");
 
-response.addDateHeader("myBirthday", add_date);
-response.addIntHeader("myNumber", add_int);
-response.addIntHeader("myNumber", 1004);
-response.addHeader("myName", add_str);
-response.setHeader("myName", "안중근");
+response.addDateHeader("myDate", addDate);
+response.addIntHeader("myNumber", addInt);
+response.addHeader("myName", addStr);
 %>
 <!DOCTYPE html>
 <html>
@@ -25,19 +22,20 @@ response.setHeader("myName", "안중근");
 	<h2>응답 헤더 정보 출력하기</h2>
 	<%
 	Collection<String> headerNames = response.getHeaderNames();
-	for(String hName : headerNames){
-		String hValue = response.getHeader(hName);
+	for(String hNames : headerNames){
+		String hvalues = response.getHeader(hNames);
 	%>
-		<li><%= hName %> : <%= hValue %></li>
+		<li><%= hNames %> : <%= hvalues %></li>
 	<%
 	}
 	%>
+	
 	<h2>myNumber만 출력하기</h2>
 	<%
-	Collection<String> myNumber = response.getHeaders("myNumber");
-	for(String myNum : myNumber){
+	Collection<String> numValues = response.getHeaders("myNumber");
+	for(String values : numValues){
 	%>
-		<li>myNumber : <%= myNum %></li>
+		<li>myNumber : <%= values %></li>
 	<%
 	}
 	%>
