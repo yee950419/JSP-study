@@ -4,7 +4,7 @@
 <h4>Include 페이지</h4>
 <%
 int pInteger2 = (Integer)(pageContext.getAttribute("pageInteger"));
-//String pString2 = (String)(pageContext.getAttribute("pageString"));
+String pString2 = (String)(pageContext.getAttribute("pageString"));
 Person pPerson2 = (Person)(pageContext.getAttribute("pagePerson"));
 %>
 <ul>

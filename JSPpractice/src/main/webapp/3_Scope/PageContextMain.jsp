@@ -9,6 +9,7 @@ pageContext.setAttribute("pagePerson", new Person("한석봉", 99));
 int pInteger = (Integer)(pageContext.getAttribute("pageInteger"));
 String pString = (String)(pageContext.getAttribute("pageString"));
 Person pPerson = (Person)(pageContext.getAttribute("pagePerson"));
+
 %>
 <!DOCTYPE html>
 <html>

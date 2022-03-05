@@ -30,11 +30,11 @@
 	
 	<h2>포워드된 페이지에서 request 영역 속성값 읽기</h2>
 	<%
-	//request.getRequestDispatcher("RequestForward.jsp?paramHan=한글&paramEng=English")
-	//.forward(request, response);
-	RequestDispatcher rd = request.getRequestDispatcher(
-			"RequestForward.jsp?paramHan=한글&paramEng=English");
-	rd.forward(request, response);
+	request.getRequestDispatcher("RequestForward.jsp?paramHan=한글&paramEng=English")
+	.forward(request, response);
+	//RequestDispatcher rd = request.getRequestDispatcher(
+	//		"RequestForward.jsp?paramHan=한글&paramEng=English");
+	//rd.forward(request, response);
 	%>
 </body>
 </html>
